@@ -1,4 +1,5 @@
 from generic_app.models import *
+import pandas as pd 
 
 class CashflowUploadFile(UploadModelMixin, Model):
     
