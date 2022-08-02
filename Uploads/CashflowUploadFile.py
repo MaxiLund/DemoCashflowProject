@@ -8,5 +8,5 @@ class CashflowUploadFile(UploadModelMixin, Model):
     def update(self):
         df = pd.read_excel(self.upload_file)
         for index, row in df.iterrows():
-            cashflow = Cashflow(amount=row['amount'], currency=row['currency'])
+            cashflow = models.Cashflow(amount=row['amount'], currency=row['currency'])
             cashflow.save()
